@@ -3,7 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Body from '../components/Body.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config';
+import Content from '../components/Content.astro';
+import { IoArrowForward } from 'react-icons/io5';
 ---
 
 <!DOCTYPE html>
@@ -13,21 +15,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	</head>
 	<Body>
 		<Header title={SITE_TITLE} />
-		<main>
-			<h1 class="font-mplus text-4xl">🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-        I am a data scientist specialising in Natural Language Processing (NLP) and machine learning. My background is in pure mathematics, having received my PhD in 2019. More recently, I am focused on software development with Julia for statistical inference.
-      </p>
-
-<p>When I am not playing around with data, I enjoy building small websites (with fastAPI and React usually), skiing in Vorarlberg / Tyrol, and playing games.</p>
-
-
-<p>Some of my other websites:</p>
-<ul>
-<li>
-  nlp-otherwise (github pages powered by fastpages) where my python notebooks get turned into posts, mostly exploring Covid19 data. There I also list a few more of my websites
-</li>
-</ul>
+		<main class="pt-[56px]">
+      <h1 class="font-mplus text-center"> What I use</h1>
+      <Content>
+        <section>
+          <p class="mb-8 indent-4">As a freelance developer, I&apos;ve been using lots of differnt types of equipment and software over the years. I'll list some stuff here.
+            <a class="inline-flex items-center gap-1 indent-1 text-green-500" href={HOMEPAGE_URL}>Learn more about me<IoArrowForward className="inline" /></a>
+          </p>
+        </section>
+      </Content>
 		</main>
 		<Footer />
 	</Body>
