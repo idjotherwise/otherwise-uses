@@ -34,20 +34,20 @@ All in all, 3 of the websites are hosted on [Vercel](https://vercel.com/docs), 7
 ## Games
 
 - _TractorSheeps_ a game for the iPad/iPhone written in Swift, using SpriteKit, where you control a tractor and you need to collect sheeps and cows. I played around with other frameworks for making the game, including [Kivy](https://kivy.org/#home) (a Python framework for writing native apps for iOS and Android) and [React Native](https://reactnative.dev/). I was very pleased with how the animated cow sprites turned out. While I didn't manage to get it finished enough to put it up onto the app store quite yet, I reused the artwork in many of the my other projects.
-  ![Wee Coo png](/images/weecoo.gif)  
+  ![Wee Coo png](/weecoo.gif)  
 - _DyfniauAngau_ is a dungeon crawler game written in Rust, made while following along with the [Hands-on Rust](https://pragprog.com/titles/hwrust/hands-on-rust/) book. This was probably my favourite project of the year, spending a couple of hours every evening learning a new language was surprisingly fun! I reused some of the artwork from TractorSheeps, making it into a classic 'drive a tractor around hell while being hunted by demonic cows and sheep' game.. At some point I plan on pairing Rust with WebAssembly to deploy the game into the wild. 
 
 ## Other Stuff
 
 - I used [Gooey](https://github.com/chriskiehl/Gooey) to give a GUI to a CLI application I made to generate invoices for me. The GUI would allow me to enter information about the company I'm invoicing, my rate, and choose the output format. 
-  ![Gooey Screenshot](/images/gooeyss.png)
+  ![Gooey Screenshot](/gooeyss.png)
   If I choose `.tex` for example, it uses a JinjaTemplate to write the output to .tex file, then uses pdflatex to compile it to a pdf. Alternatively I can compile directly to pdf by building up directly with the [FPDF](https://pyfpdf.readthedocs.io/en/latest/) library, but this doesn't allow for editing after the fact.
 
 - I used [spaCy](https://spacy.io/) and [fast.ai](https://www.fast.ai/) to build a Welsh language model, then used that to train a sentiment analysis model for Welsh language movie reviews. The language model part worked quite well, trained on welsh wikipedia pages, but I struggled to find a sufficiently good dataset for the sentiment analysis part. I want to return to this project at some point, to either hand-craft a dataset, or find a different task to fine-tune the language model on.
 
 - I made a simple data-labelling app which I use locally to label data. It does a similar thing to [Explosion.ai's prodigy](https://explosion.ai/software#prodigy), but much simpler (and I've not been able to justify paying for prodigy yet..). It's not pretty, but it does the job for when I want to label a few hundred examples of text.
 
-![Datas labelling](/images/datas.png)
+![Datas labelling](/datas.png)
 
 ## Programming Languages
 
