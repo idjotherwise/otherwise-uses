@@ -24,7 +24,7 @@ export default function OtherwiseIcon() {
           cx="50%"
           cy="40%"
           r="30%"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
       </g>
     </svg>
