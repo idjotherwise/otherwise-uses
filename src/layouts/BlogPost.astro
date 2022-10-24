@@ -27,9 +27,9 @@ const {
   <Body>
     <Header />
     <main>
-      <!-- <article> -->
+      <!-- TODO: make links in blockquotes not blend in so much in dark mode -->
       <article
-        class="prose prose-sm lg:prose-lg xl:prose-xl dark:prose-blockquote:text-slate-600 prose-blockquote:bg-slate-200 prose-slate prose-img:ml-auto prose-img:mr-auto lg:prose-img:my-0 dark:prose-invert max-w-full px-2"
+        class="prose prose-sm lg:prose-lg xl:prose-xl dark:prose-blockquote:text-slate-300 prose-blockquote:bg-slate-300 prose-slate prose-img:ml-auto prose-img:mr-auto lg:prose-img:my-0 dark:prose-invert max-w-full px-2 dark:prose-a:text-blue-300 prose-blockquote:bg-opacity-10 prose-a:text-green-600 hover:prose-a:text-green-800 dark:hover:prose-a:text-blue-600"
       >
         {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
         <h1 class="title">{title}</h1>

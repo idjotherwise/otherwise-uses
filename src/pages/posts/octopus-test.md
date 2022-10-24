@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPost.astro'
-title: 'Understanding form and the Octopus test'
-description: 'Lorem ipsum dolor sit amet'
+title: 'The Octopus test 🐙'
+description: 'Discussing an interesting thought experiment about learning meaning from language'
 pubDate: 'Sept 09 2021'
 heroImage: '/placeholder-hero.jpg'
 ---
