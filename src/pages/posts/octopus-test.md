@@ -1,18 +1,19 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: "Understanding form and the Octopus test"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Sept 09 2021"
-heroImage: "/placeholder-hero.jpg"
+layout: '../../layouts/BlogPost.astro'
+title: 'Understanding form and the Octopus test'
+description: 'Lorem ipsum dolor sit amet'
+pubDate: 'Sept 09 2021'
+heroImage: '/placeholder-hero.jpg'
 ---
 
-I recently listened to an episode of the 
+I recently listened to an episode of the
 [Gradient Dissent (the Weights & Biases podcast) with Emily Bender](https://wandb.ai/wandb_fc/gradient-dissent/reports/Emily-M-Bender-Professor-at-UW-Language-Models-and-Linguistics--Vmlldzo4ODY0NDE?galleryTag=gradient-dissent)
 in which they discussed Language Models (LM) and the dangers arising from making increasingly larger ones. The discussion was primarily centered around
 the paper [On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜](https://dl.acm.org/doi/10.1145/3442188.3445922). They also discuss some ideas from
 [Climbing towards NLU:
 On Meaning, Form, and Understanding in the Age of Data](https://aclanthology.org/2020.acl-main.463/) (E. Bender & A. Koller, 2020).
 Here I wanted to present a few of the ideas discussed in the podcast episode and the referenced papers.
+
 ## Meaning, form and understanding
 
 My favourite quote from the Bender & Koller[^1] paper is the following,
@@ -39,15 +40,15 @@ to the other person; or to ask them to do something;
 or simply to socialize.
 
 **Conventional Meaning** of an expression is what is constant across all of it's possible context of use. Conventional meaning is an abstract object that represents the communicative potential of a form, given
-the linguistic system it is drawn from. 
+the linguistic system it is drawn from.
 
 **Meaning** is the relation between form and communicative intent
 
 So _meaning_ is made up out of two things, an expression of language (_form_)
-and the communicative intent which may be independent of the form. 
+and the communicative intent which may be independent of the form.
 
 Then to _understand_ something is the process of retrieving the _communicative intent_
-given the _form_. 
+given the _form_.
 
 So in a conversation between two people, the speaker has a certain communicative intent $i$, and chooses an expression $e$ with a
 standing (conventional) meaning $s$ which is fit to express $i$ in the
@@ -57,15 +58,14 @@ knowledge of the communicative situation and their
 hypotheses about the speaker’s state of mind and
 intention in an attempt to deduce $i$.
 
-
 It is often impossible to say something that doesn't require knowledge/understanding about the world. Let's look at an example,
 
-- _Person A and B are sat on opposite sides of a table. There is a clock on the wall behind person A_. 
+- _Person A and B are sat on opposite sides of a table. There is a clock on the wall behind person A_.
 - "**The clock says that it is almost 10pm**", says A.
 - _Person A and B both get up and go to the next room to watch TV_
 
-Person A had the _communicative intent_ of wanting to say what the time was, because A 
-knew that their favourite TV show starts at 22.00, so they had better go to the TV room. 
+Person A had the _communicative intent_ of wanting to say what the time was, because A
+knew that their favourite TV show starts at 22.00, so they had better go to the TV room.
 Person A then chose the expression (the _form_) "the clock says that it is almost 10pm" which they feel
 has the conventional meaning of telling the time and is enough to express their
 communicative intent.
@@ -78,11 +78,10 @@ almost 22.00[^2].
 Given only the expression that _A_ used, a language model would not have much hope
 to really _understand_ what the intent was.
 
-It's also interesting to think about how we know that the 'clock' is almost certainly not a thing that can speak, nor do we expect it 'say' anything else other than 
+It's also interesting to think about how we know that the 'clock' is almost certainly not a thing that can speak, nor do we expect it 'say' anything else other than
 the correct time (let's assume that it is a magical clock that is never wrong). How do we know these things?
 We just know that the idea of a talking clock is nonsense, and only
 happens in sci-fi stories.
-
 
 ## The Octopus test
 
@@ -95,13 +94,13 @@ text messages in english to each other.
 Without either person A or B's knowledge another entity O (a very clever octopus) who cannot speak english but has a very
 advanced knowledge of statistics and pattern matching.
 
-After some very long time, O decides to cut the wire so that they can 
+After some very long time, O decides to cut the wire so that they can
 speak directly to each person. The question is, could O have _learned_ enough
-from the _form_ (the text messages) so that neither person knows that anything has changed? 
+from the _form_ (the text messages) so that neither person knows that anything has changed?
 
 The answer depends on the nature of the task that O is given. If person A and B have
 been using the text messages for small talk (i.e, a _communicative intent_ of 'socialising'),
-then O would likely have learned enough from the _form_ to be able to 
+then O would likely have learned enough from the _form_ to be able to
 continue this small talk. But this is not the same as O _understanding_ what
 A is talking about, it just means that A is doing the mental work of attributing
 meaning to the responses of O.
@@ -115,12 +114,12 @@ the theory of crafting weapons from coconuts and sticks.
 
 Another important aspect of language models that needs to be understood is
 that the data these models are trained on can often harbour significant biases.
-For example, the Switch-C[^3] transformer model was trained Colossal Clean Common Crawl dataset 
+For example, the Switch-C[^3] transformer model was trained Colossal Clean Common Crawl dataset
 (which is about ~750GB of data), which is text taken from the internet.
 To start with, think about what kind of people are represented in this sort of data.
 Internet data over-represents younger users and those from developed countries.
 
-As we have already discussed, _understanding_ language is a process of 
+As we have already discussed, _understanding_ language is a process of
 pairing _form_ with _meaning_, and since these large internet datasets only
 contain _form_, language models learning from such datasets cannot really gain
 _understanding_.
@@ -135,12 +134,10 @@ if decisions start being made upon the predictions of these models.
 The stochastic parrot paper suggests that we need to be mindful about how we currate
 and create these datasets in future.
 
-
-
-
-
 [^1]: [Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data](https://aclanthology.org/2020.acl-main.463/) (Bender & Koller, 2020)
 [^2]: why didn't they just say "the time is now 21.56, we should move to the TV room because our favourite TV show is starting 4 minutes"??
-[^3]: [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
-](https://arxiv.org/abs/2101.03961) (Fedus, Zoph & Shazeer, 2021)
+[^3]:
+    [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
+    ](https://arxiv.org/abs/2101.03961) (Fedus, Zoph & Shazeer, 2021)
+
 [^note]: Or: their knowledge of the mental state of the other person in the conversation, along with the TV schedule

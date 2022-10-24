@@ -1,14 +1,26 @@
 ---
-import {Image} from '@astrojs/image/components'
+import { Image } from '@astrojs/image/components'
 ---
-<section class="relative mb-6 h-80 flex justify-center items-center">
+
+<section class="relative mb-6 h-80 flex justify-center">
   <div class="absolute w-full h-full overflow-hidden">
-    <Image class="" src={localStorage.getItem('theme') === "dark" ? "/masthead-light.jpg" : "/masthead-dark.jpg"} width={1286*2} aspectRatio={2.5} alt="Thumbnail"/>
-    
+    <Image
+      class=""
+      src={localStorage.getItem('theme') === 'dark'
+        ? '/masthead-light.jpg'
+        : '/masthead-dark.jpg'}
+      width={1286 * 2}
+      aspectRatio={2.5}
+      alt="Thumbnail"
+    />
   </div>
-  <div class="z-10 text-center px-8 drop-shadow-lg shadow-black">
+  <div class="z-10 text-center px-8 backdrop-blur-sm h-32 absolute top-5">
     <div class="uppercase text-sm mb-4">Welcome to</div>
-    <div class="text-4xl font-mplus font-medium">A currated list of <span class="dark:text-green-300 text-green-700">stuff</span></div>
+    <div class="text-4xl font-mplus font-medium">
+      A currated list of <span class="dark:text-blue-300 text-green-600"
+        >stuff</span
+      >
+    </div>
   </div>
 </section>
 <!-- <section class="relative mb-6 h-80 flex justify-center items-center">

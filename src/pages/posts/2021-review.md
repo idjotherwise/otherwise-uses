@@ -1,14 +1,15 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: "2021 in Review"
-description: "A quick look at projects I did in 2021"
-pubDate: "Dec 31 2021"
-heroImage: "/placeholder-hero.jpg"
+layout: '../../layouts/BlogPost.astro'
+title: '2021 in Review'
+description: 'A quick look at projects I did in 2021'
+pubDate: 'Dec 31 2021'
+heroImage: '/placeholder-hero.jpg'
 ---
 
 # What year is it? What happened? Hello?
+
 > Originally posted on my [other website](https://tybednext.vercel.app/)
-What have I done in 2021? Here is a brief outline of the projects that I've worked on, listened to, and some good old fashioned stats about what I've done over the year.
+> What have I done in 2021? Here is a brief outline of the projects that I've worked on, listened to, and some good old fashioned stats about what I've done over the year.
 
 ## Websites
 
@@ -23,23 +24,23 @@ Here is a non-exhaustive list of websites that I've worked on this year..
 - [dvotherwise.vercel.app](https://dvotherwise.vercel.app). In another attempt to finally learn [d3-js](https://d3js.org/), an incredibly powerful javascript library for making data visualisations, I made a simple website to showcase some graphs. I initially wanted it to be just vanilla HTML and some simple css, but eventually used it as an opportunity to practice using TailwindCSS and also a new static site generator called [Astro](https://astro.build) (I didn't actually realise that it was still in very early development - so much for keeping it simple!). It turns out that d3 is much easier than I thought, but it just takes time to learn what you can and cannot do (there isn't much you can't do with it though). And Astro was a nice find as well, a very interesting 'React-component-style' of building out static sites, which was very intuitive to use.
 - [railfans-blog](https://railfans-blog.herokuapp.com/). I originally tried using Ruby on Rails several years ago, before knowing anything about any programming (or web development), and I quickly gave up, thinking that it was too confusing and complex. After spending this last year developing websites in various frameworks in Python and Javascript, I decided to give it another go. I was pleasantly surprised how nice it is to use, and can now appreciate how powerful it is to be able to just scaffold up lots of structures/routes/models. I'm glad I learnt some lower-level frameworks before returning to it, but I will certainly consider ruby on rails a good option for quickly making fully-functional websites in the future.
 
-- FastMenu (no link, because it's not open to the public) - My co-working office has a chef that comes in twice a week to cook for us. Twice every week, someone used to go around to collect orders from people for the next food day. Eventually I decided to help that person out by making a website so that people in the office can register their interest for the next meal on there. They can see the menu on the website, then place an order for as many people as they want (people sometimes have clients come along as guests). The backend is written with fastAPI and sqlmodel, and the frontend is a Next.js app. 
+- FastMenu (no link, because it's not open to the public) - My co-working office has a chef that comes in twice a week to cook for us. Twice every week, someone used to go around to collect orders from people for the next food day. Eventually I decided to help that person out by making a website so that people in the office can register their interest for the next meal on there. They can see the menu on the website, then place an order for as many people as they want (people sometimes have clients come along as guests). The backend is written with fastAPI and sqlmodel, and the frontend is a Next.js app.
 
 - [Fastnasa](https://fastnasa.herokuapp.com) a simple fastapi page which fetches the Picture of the Day from the [NASA API](https://api.nasa.gov/)
 
-- [ffxiv quest checker](https://ffquestcheck.herokuapp.com/) For a few weeks I played Final Fantasy 15, an online game in which there are a ton of quests to do. To keep track of how many quests were left to do, I made a simple tool to scrape html documents from the final fantasy wiki page, parse the results and rebuild the data and put it into a postgres database, so that it was possible to render each group of quests as a separate route. A little pointless, but it was good to learn about parsing data from tables that are embedded into html pages and cleaning up the irrelevant data - for example there was some javascript script tags that were there for advertising and was getting in the way of parsing the tables cleanly. So the whole files had to downloaded, then preprocessed to strip out all unrelated content. This approach was fine because the list of quests were not updated frequently. Another issue was that sometimes the tables were only generated when the table was interacted with, because of some `onload()` javascript code. This also applied with gathering data for the covid data exploration websites (dataotherwise and nlp-otherwise). 
+- [ffxiv quest checker](https://ffquestcheck.herokuapp.com/) For a few weeks I played Final Fantasy 15, an online game in which there are a ton of quests to do. To keep track of how many quests were left to do, I made a simple tool to scrape html documents from the final fantasy wiki page, parse the results and rebuild the data and put it into a postgres database, so that it was possible to render each group of quests as a separate route. A little pointless, but it was good to learn about parsing data from tables that are embedded into html pages and cleaning up the irrelevant data - for example there was some javascript script tags that were there for advertising and was getting in the way of parsing the tables cleanly. So the whole files had to downloaded, then preprocessed to strip out all unrelated content. This approach was fine because the list of quests were not updated frequently. Another issue was that sometimes the tables were only generated when the table was interacted with, because of some `onload()` javascript code. This also applied with gathering data for the covid data exploration websites (dataotherwise and nlp-otherwise).
 
 All in all, 3 of the websites are hosted on [Vercel](https://vercel.com/docs), 7 on [Heroku](https://www.heroku.com/home), 2 on Digital Ocean, 2 on GitHub Pages.
 
 ## Games
 
 - _TractorSheeps_ a game for the iPad/iPhone written in Swift, using SpriteKit, where you control a tractor and you need to collect sheeps and cows. I played around with other frameworks for making the game, including [Kivy](https://kivy.org/#home) (a Python framework for writing native apps for iOS and Android) and [React Native](https://reactnative.dev/). I was very pleased with how the animated cow sprites turned out. While I didn't manage to get it finished enough to put it up onto the app store quite yet, I reused the artwork in many of the my other projects.
-  ![Wee Coo png](/weecoo.gif)  
-- _DyfniauAngau_ is a dungeon crawler game written in Rust, made while following along with the [Hands-on Rust](https://pragprog.com/titles/hwrust/hands-on-rust/) book. This was probably my favourite project of the year, spending a couple of hours every evening learning a new language was surprisingly fun! I reused some of the artwork from TractorSheeps, making it into a classic 'drive a tractor around hell while being hunted by demonic cows and sheep' game.. At some point I plan on pairing Rust with WebAssembly to deploy the game into the wild. 
+  ![Wee Coo png](/weecoo.gif)
+- _DyfniauAngau_ is a dungeon crawler game written in Rust, made while following along with the [Hands-on Rust](https://pragprog.com/titles/hwrust/hands-on-rust/) book. This was probably my favourite project of the year, spending a couple of hours every evening learning a new language was surprisingly fun! I reused some of the artwork from TractorSheeps, making it into a classic 'drive a tractor around hell while being hunted by demonic cows and sheep' game.. At some point I plan on pairing Rust with WebAssembly to deploy the game into the wild.
 
 ## Other Stuff
 
-- I used [Gooey](https://github.com/chriskiehl/Gooey) to give a GUI to a CLI application I made to generate invoices for me. The GUI would allow me to enter information about the company I'm invoicing, my rate, and choose the output format. 
+- I used [Gooey](https://github.com/chriskiehl/Gooey) to give a GUI to a CLI application I made to generate invoices for me. The GUI would allow me to enter information about the company I'm invoicing, my rate, and choose the output format.
   ![Gooey Screenshot](/gooeyss.png)
   If I choose `.tex` for example, it uses a JinjaTemplate to write the output to .tex file, then uses pdflatex to compile it to a pdf. Alternatively I can compile directly to pdf by building up directly with the [FPDF](https://pyfpdf.readthedocs.io/en/latest/) library, but this doesn't allow for editing after the fact.
 
@@ -58,13 +59,13 @@ Before 2021, I only coded in Python and R, but this year I've begun branching ou
 - JavaScript
 - Ruby
 
-I use Julia almost full time now in my profession work, while still using Python for all my data science/machine learning projects (using [PyTorch](https://pytorch.org/), [spaCy](https://spacy.io/) and [fast.ai](https://www.fast.ai/)). Javascript (and vanilla HTML+CSS) has become my go-to front-end development language. For the time being, Python is still my go-to for machine learning and NLP projects - though there are some promising looking packages in Julia being developed which might change that. 
+I use Julia almost full time now in my profession work, while still using Python for all my data science/machine learning projects (using [PyTorch](https://pytorch.org/), [spaCy](https://spacy.io/) and [fast.ai](https://www.fast.ai/)). Javascript (and vanilla HTML+CSS) has become my go-to front-end development language. For the time being, Python is still my go-to for machine learning and NLP projects - though there are some promising looking packages in Julia being developed which might change that.
 
 ## Podcasts
 
 I could probably list every episode from all of these podcasts because I enjoyed almost all of them, but I'll list some that stood out to me (in no particular order).
 
-### Gradient Dissent 
+### Gradient Dissent
 
 - [Chris Padwick](https://wandb.ai/wandb_fc/gradient-dissent/reports/Chris-Padwick-Smart-Machines-for-More-Sustainable-Farming--VmlldzoxMzE5MDQ0?galleryTag=gradient-dissent): An interview with the director of Computer Vision Machine Learning at Blue River Technology, where they use computer vision to aid farmers with identifying crops and weeds, allowing them to only spray herbicide where it is needed. Really cool application of computer vision which can save farmers lots of money, and presumably it's a pretty good thing to reduce the amount of herbicide we're dumping into the crops!
 
@@ -76,13 +77,15 @@ I could probably list every episode from all of these podcasts because I enjoyed
 - [Chris Albon](https://wandb.ai/wandb_fc/gradient-dissent/reports/Chris-Albon-ML-Models-and-Infrastructure-at-Wikimedia--Vmlldzo5NjU4MzE?galleryTag=gradient-dissent):
   An interview with the Director of ML at Wikimedia, in which they talk about all the different kinds of NLP models that Wikimedia develop to help support Wikipedia, with a particular focus on the infrastructure that they developed to deliver all of the models. Really cool to hear about something that many people probably don't even realise is happening!
 
-- [Emily M. Bender](https://wandb.ai/wandb_fc/gradient-dissent/reports/Emily-M-Bender-Language-Models-and-Linguistics--Vmlldzo4ODY0NDE?galleryTag=gradient-dissent): 
+- [Emily M. Bender](https://wandb.ai/wandb_fc/gradient-dissent/reports/Emily-M-Bender-Language-Models-and-Linguistics--Vmlldzo4ODY0NDE?galleryTag=gradient-dissent):
   This was a great episode with Professor of Linguistics Emily M. Bender, and I've written about this episode before [in this post](/posts/octopus-test). They talk about a wide range of topics in NLP, particularly focusing on the recent growth in the size of language models being produced. Probably my favourite episode of the year!
 
- - [Pete Warden](https://wandb.ai/wandb_fc/gradient-dissent/reports/Pete-Warden-Practical-Applications-of-TinyML--VmlldzoxMDkxMDk1?galleryTag=gradient-dissent): An interview with the Technical Lead of the TensorFlow Micro team, where they talk about really interesting problems arising from developing ML models for tiny devices - like a Raspberry Pi or even smaller chips within mobiles. For example, if you were to try and run a full-size speech recognition model (for something like Siri) on a normal chip, it would just drain your phone battery! But running a compressed, light-weight and efficient model on a low-power chip in a separate process saves alot of power and allows the speech recognition to be in 'always on' mode. I always try to opt for smaller models when doing a ML model, using optimised and [quantized ONNX format](https://pytorch.org/docs/stable/quantization.html) when feasible. It can produce huge speedups and reduction in size, at the cost of sometimes tiny accuracy loss - so it was nice to hear of the work being done in this area!
+- [Pete Warden](https://wandb.ai/wandb_fc/gradient-dissent/reports/Pete-Warden-Practical-Applications-of-TinyML--VmlldzoxMDkxMDk1?galleryTag=gradient-dissent): An interview with the Technical Lead of the TensorFlow Micro team, where they talk about really interesting problems arising from developing ML models for tiny devices - like a Raspberry Pi or even smaller chips within mobiles. For example, if you were to try and run a full-size speech recognition model (for something like Siri) on a normal chip, it would just drain your phone battery! But running a compressed, light-weight and efficient model on a low-power chip in a separate process saves alot of power and allows the speech recognition to be in 'always on' mode. I always try to opt for smaller models when doing a ML model, using optimised and [quantized ONNX format](https://pytorch.org/docs/stable/quantization.html) when feasible. It can produce huge speedups and reduction in size, at the cost of sometimes tiny accuracy loss - so it was nice to hear of the work being done in this area!
 
 ### Chai Time Data Science
+
 - [Andrada Olteanu](https://www.youtube.com/watch?v=nshTx_EfRKU&list=PLLvvXm0q8zUbiNdoIazGzlENMXvZ9bd3x&index=4&ab_channel=ChaiTimeDataScience): A great interview with data scientist Andrada Olteanu, talking about her journey of learning data science via Kaggle, and how she learned how to use D3-js to make really interactive data visualisations. This episode was my main inspiration for finally learning how to use D3!
+
 ### 80,000 Hours
 
 - [Chris Ola](https://80000hours.org/podcast/episodes/chris-olah-interpretability-research/): a cool interview about trying to understand what goes on inside neural network models. They talk about some techniques he uses to understand what each of component of these models are learning. For example in standard computer vision models, it's known that the first few layers learn to detect basic structural things like _edges_, _corners_, _shapes_ or simple _patterns_. But as you dig deeper into the layers, it's quite hard to know what is being learned. This can often lead to models incorrectly learning things like 'I detect a ball on the floor. There must be a dog in the picture' if the model is trained on a dataset which is full of dogs with toys!
@@ -102,6 +105,7 @@ I could probably list every episode from all of these podcasts because I enjoyed
 - [Will McGugan](https://talkpython.fm/episodes/show/336/terminal-magic-with-rich-and-textual): An interview with open-source developer Will McGugan, creator of Rich and Textual. These are really cool python libraries for making nice terminal-based UIs in python. Great to hear about cool projects like this, and the openness in which they are being developed is nice to see.
 
 - [Sebastián Ramírez](https://fastapi.tiangolo.com/): Not a single episode, but all the projects that Sebastián does ends up on Python Bytes or Talk Python to Me alot. His main projects are FastAPI (which I use all the time) and sqlmodel.
+
 ## Stats
 
 ### Coding
@@ -133,7 +137,7 @@ Some stats of commands I used in the terminal this year!
 ```
 
 Since I use git for all of my projects, that's no surprise. Just like everyone, I always forget what directory I'm in so `ls` is also no surprise. The fact that `cargo` (part of the Rust toolchain) is catching up to `python` was a nice surprise, but then again you need `cargo` to do anything with Rust but I often just have to run `python` only once per session and rely on hot-reloading to watch for changes - or more commonly, to launch a Jupyter notebook session.
-According to Github, I made 650 commits this year - that's almost two per day! 
+According to Github, I made 650 commits this year - that's almost two per day!
 
 ### Podcasts and Audiobooks
 
@@ -145,7 +149,7 @@ Since skiing is a big part of my life during the winter, I managed to get out on
 
 # Wrapping up
 
-I initially thought 2021 was a very slow year for work, but having written down some of the things I worked on, it wasn't so bad in the end. It's been a mentally draining couple of years for everyone, so I'm just happy to be healthy and busy working on things I enjoy. I have many projects on my wish list for 2022, so I hope it continues like that. 
+I initially thought 2021 was a very slow year for work, but having written down some of the things I worked on, it wasn't so bad in the end. It's been a mentally draining couple of years for everyone, so I'm just happy to be healthy and busy working on things I enjoy. I have many projects on my wish list for 2022, so I hope it continues like that.
 
 > Happy new year!
 > Blwyddyn newydd dda!
